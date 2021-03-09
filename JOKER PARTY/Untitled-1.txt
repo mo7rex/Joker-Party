@@ -1,0 +1,95 @@
+from flask_wtf import FlaskForm
+from wtforms import StringField,  SubmitField, BooleanField , NumberField,DateField
+from wtforms.validators import DataRequired, Length, Email
+
+
+class RegistrationForm(FlaskForm):
+    username = StringField('NAME',
+                           validators=[DataRequired(), Length(min=2, max=20)])
+    email = StringField('Email',
+                        validators=[DataRequired(), Email()])
+    phone = NumberField('Phone', validators=[DataRequired()])
+    City = StringField('City',
+                                     validators=[DataRequired()])
+    Address = StringField('Address',
+                                     validators=[DataRequired()])
+    Date = DateField('Date',
+                                     validators=[DataRequired()])
+    submit = SubmitField('Sign Up')
+?
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+  <body>
+          
+<div class="form" style="width: 70%;margin-top: 10%;margin-left: 15%;position: relative;">                 
+  <form method="POST"    action="">                           
+  <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                            {{form.Name.label(class="form-control-label")}}
+                                            {{form.Name.label(class="form-control form-control-lg")}}
+                                          </div>
+                                <div class="form-group col-md-6">
+                                  {{form.email.label(class="form-control-label")}}
+                                  {{form.email.label(class="form-control form-control-lg")}}
+                                </div>
+                              <div class="form-group col-md-6">
+                                {{form.phone.label(class="form-control-label")}}
+                                {{form.phone.label(class="form-control form-control-lg")}}
+
+                              </div>
+                            </div>
+                                 
+                            <div class="form-row">
+                            
+                                    <div class="form-group col-md-6">
+                                      {{form.City.label(class="form-control-label")}}
+                                {{form.City.label(class="form-control form-control-lg")}}
+                                        <option selected>Choose...</option>
+                                        <option>Baghdad/Al-Resafa</option>
+                                        <option>Baghdad/Al-Karkh</option>
+                                        <option></option>
+      
+                                      </select>
+                                    </div>
+                            <div class="form-group col-md-6">
+                              {{form.Address.label(class="form-control-label")}}
+                              {{form.Address.label(class="form-control form-control-lg")}}
+
+                            </div>
+                            <div class="form-group col-md-6">
+                              {{form.Date .label(class="form-control-label")}}
+                              {{form.Date.label(class="form-control form-control-lg")}}
+                            </div>
+                                 
+                       
+                             
+                          
+                            <div class="form-group col-md-6">
+                              <label for="time">Time:</label>
+
+                              <input type="time" id="time" name="time"
+                                     value="10:00"
+                                     min="00:00" max="23:59"></div>
+                            </div> 
+                 
+                    <div>
+                      <button type="button" onclick="location.href='/info'" class="btn btn-light" style="background-color: rgb(62, 255, 110); color: black; transform: translate(900%, 470%);position:absolute;bottom: 20% ;left:-20% ;" >BOOK</button>
+                    </div>
+
+                </div>
+            
+              </form> 
+          </body>
+{% endblock %}
+
+
+?
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

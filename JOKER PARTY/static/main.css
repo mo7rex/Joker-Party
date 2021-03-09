@@ -1,0 +1,99 @@
+.background { 
+    width: 98.7vw;
+    height: 80vh;
+    background-image: url("../img/balloon.jpg");
+    background-size: cover ;
+    
+    }
+.background2 {
+    width: 98.7vw;
+    height: 100vh;
+    background-image: url("../img/backround.png");
+    
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    background-repeat: repeat;
+   
+    background-position: center;
+    
+
+   
+
+}    
+
+
+.title {
+    text-align: center;
+    margin-top: 150px;
+    font-size: 70px;
+
+}
+.title1 {
+    text-align: center;
+    font-size: 30px;
+}
+.footer {
+    background-color: #FCD0D0;
+}
+.logo
+{
+    position: absolute;
+     max-width: 10%;
+     width: 10%;
+     height: auto;
+     top: 50%;     
+     left: 50%;
+     transform: translate( -500%, -30%);
+}
+
+
+.card {
+    max-width: 1600px;margin: 70px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.226);
+    
+}
+.button {
+    margin-top: 300px;
+}
+.contact {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+.cdiv
+{
+    text-align: center; 
+    background-color:#ADD7FC ; 
+    height: 230px; 
+    width: 500px; 
+    top: 50%; 
+    left: 59%; 
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px gray;
+}
+
+@media (min-width:480px)  { 
+
+    .cdiv{
+        text-align: center;
+    }
+}
+.body{
+    width:100vw;
+    height: 70vh;
+    background-image: url("../img/backgrund.png");
+    
+    margin:15px;
+    margin-right: 20px;
+}
+.background3 {
+    width: 98.7vw;
+    height: 100vh;
+    background-image: url("../img/backgrund.png");
+    
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+   
+    background-position: center;
+}

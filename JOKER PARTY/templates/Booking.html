@@ -1,0 +1,49 @@
+
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<link rel="stylesheet" href="/static/assets/css/Booking.css">
+<body>
+  <div class="card-group" style="margin-top: -20px; margin-left: 50px; ">
+    <div class="card shadow p-3 mb-5 bg-white rounded" style="background-image: url(static/assets/img/c.jpg);  margin-right: 40px;">
+      <img src="/static/assets/img/joker.png" class="card-img-top" alt="..." style="width: 90%; height:55% ;">
+      <div class="card-body">
+        <h4 class="card-title" style="font-family: fantasy;">Clown</h4>
+        <div style="background-color: rgb(252, 107, 107);">
+        <p class="card-text" style="color: rgb(27, 27, 27) ; font-family: cursive;">NO BORING LINES In a traditional birthday party, the clown will make your child never forget his birthday party, make the kids always happy in your party , make your party full of laughing and fun.</p>
+        </div>
+        <button type="button" onclick="location.href='/register'" class="btn btn-light" style="background-color: rgb(62, 255, 110); color: black; margin-top: 20px;position: relative;bottom: 10px;">BOOK</button>
+      </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-white rounded" style="background-image: url(/static/assets/img/c.jpg); margin-right: 40px;">
+      <img src="/static/assets/img/mag.jpg" class="card-img-top" alt="..." style="width: 100%;height:55% ;">
+      <div class="card-body">
+        <h4 class="card-title" style="font-family: fantasy;">Magician</h4>
+        <div style="background-color: rgb(252, 107, 107);">
+        
+        <p class="card-text" style="color: rgb(27, 27, 27) ; font-family: cursive;">Hire a magician for your kids birthday party, corporate event, holiday, or neighborhood get-together and delight your guests – young and old alike.</p>
+      </div>
+        
+        <button type="button" onclick="location.href='/register'" class="btn btn-light" style="background-color: rgb(62, 255, 110); color: black; margin-top:65px ;position: relative;bottom: 10px;" >BOOK</button>
+      </div>
+    </div>
+    <div class="card shadow p-3 mb-5 bg-white rounded" style="background-image: url(/static/assets/img/c.jpg);">
+      <img src="/static/assets/img/table.png" class="card-img-top" alt="..." style="width: 100%; height:55% ;">
+      <div class="card-body">
+        <h4 class="card-title" style="font-family: fantasy;">Party organiser</h4>
+        <div style="background-color: rgb(252, 107, 107);">
+        <p class="card-text" style="color: rgb(27, 27, 27) ; font-family: cursive; font-size:15px;"> Are you looking for a birthday planner? We can provide you the best birthday planner in Baghdad The best part is that, we can provide you the service irrespective of the time in hand and give you full control over things.</p>
+        </div>
+        <button type="button" onclick="location.href='/register'" class="btn btn-light" style="background-color: rgb(62, 255, 110); color: black; margin-top: 20px;position: relative;bottom: 10px;"  >BOOK</button>
+      </div>
+    </div>
+  </div>
+ 
+
+</body>
+
+{% endblock %}

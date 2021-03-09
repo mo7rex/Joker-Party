@@ -1,0 +1,19 @@
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = '9e5be3e78db0fb59ba72329ec01a90af'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
+db = SQLAlchemy(app)
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    Name = db.Column(db.String(20), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    phone = db.Column(db.String(20), nullable=False)
+    City = db.Column(db.String(60), nullable=False)
+    Address = db.Column(db.String(60), nullable=False)
+    datetime = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    
+    def __repr__(self):
+        return f"User('{self.Name}', '{self.email}')"
+rows = db.execute("INSERT INTO users (Name,Email,Phone,City,Address,Date) VALUES (:Name,:Email,:Phone,:City,:Address,:Date)",Name=request.form.get("Name"),
+    Email=request.form.get("Email"),Phone=request.form.get("Phone"),City=request.form.get("City"),
+    Address=request.form.get("Adderss"),Date=request.form.get("Date"))

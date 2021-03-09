@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+  <body>
+          
+<div class="form" style="width: 70%;margin-top: 10%;margin-left: 15%;position: relative;">                 
+                                 <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                            <label for="inputName">Name</label>
+                                            <input type="text" class="form-control" id="inputName">
+                                          </div>
+                                <div class="form-group col-md-6">
+                                <label for="inputEmail4">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4">
+                              </div>
+                              <div class="form-group col-md-6">
+                                <label for="inputPhone">Phone</label>
+                                <input type="text" class="form-control" id="inputPhone">
+                              </div>
+                            </div>
+                                 
+                            <div class="form-row">
+                            
+                                    <div class="form-group col-md-6">
+                                      <label for="inputCity">City</label>
+                                      <select id="inputCity" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>Baghdad/Al-Resafa</option>
+                                        <option>Baghdad/Al-Karkh</option>
+                                        <option></option>
+      
+                                      </select>
+                                    </div>
+                            <div class="form-group col-md-6">
+                              <label for="inputAddress">Address</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="Mansour">
+                            </div>
+                            <div class="form-group col-md-6">
+                                    <label for="Date">Date:</label>
+
+                                    <input type="date" id="Date" name="Date"
+                                           value="2019-12-22"
+                                           min="2019-01-01" max="2020-12-31"></div>
+                                 
+                       
+                             
+                          
+                            <div class="form-group col-md-6">
+                              <label for="time">Time:</label>
+
+                              <input type="time" id="time" name="time"
+                                     value="10:00"
+                                     min="00:00" max="23:59"></div>
+                            </div> 
+                 
+                    <div>
+                      <button type="button" onclick="location.href='/reg'" class="btn btn-light" style="background-color: rgb(62, 255, 110); color: black; transform: translate(900%, 470%);position:absolute;bottom: 20% ;left:-20% ;" >BOOK</button>
+                    </div>
+
+                </div>
+            
+
+          </body>
+{% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
